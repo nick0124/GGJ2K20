@@ -22,7 +22,9 @@ public class StarterScenes : MonoBehaviour
 
     public void ClickPlay()
     {
-        SceneManager.LoadScene(Random.Range(1, 2));
+        //SceneManager.LoadScene(Random.Range(1, 2)); // Случайный выбор
+        
+        SceneManager.LoadScene(1);
     }
 
     public void ClickArrow(int dir)

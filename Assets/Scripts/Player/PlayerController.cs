@@ -15,12 +15,15 @@ public class PlayerController : MonoBehaviour
 	public KeyCode moveRight;
 	public KeyCode moveJump;
 
+	private int countScoreFinish;
+	
 	private int collide;
 
     // Start is called before the first frame update
     void Start()
     {
 		rb = gameObject.GetComponent<Rigidbody2D>();
+		PlayerPrefs.SetInt(name, 0);
     }
 
     // Update is called once per frame
