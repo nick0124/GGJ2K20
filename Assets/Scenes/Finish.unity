@@ -717,7 +717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0418\u0427\u042C\u042F"
+  m_Text: "\u0420\u0415\u0421\u0422\u0410\u0420\u0422"
 --- !u!222 &734556758
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -794,7 +794,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0415\u0429\u0415 \u0420\u0410\u0417"
+  m_Text: "\u0414\u0410\u041B\u0415\u0415"
 --- !u!222 &774643228
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1296,12 +1296,12 @@ GameObject:
   - component: {fileID: 1559517337}
   - component: {fileID: 1559517336}
   m_Layer: 5
-  m_Name: BackMenu
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1559517335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1317,9 +1317,9 @@ RectTransform:
   m_Father: {fileID: 1717691712}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 960, y: -970}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1559517336
@@ -1366,7 +1366,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1739929307}
-        m_MethodName: ClickBackToMenu
+        m_MethodName: ClickNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1814,4 +1814,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnRestart: {fileID: 941520052}
-  btnBackToMenu: {fileID: 1559517334}
+  btnNext: {fileID: 1559517334}

@@ -5,7 +5,7 @@ public class GameData : MonoBehaviour
     private static int playerMax = 4;
     private static int playerMin = 2;
 
-    private static float maxCountBal = 4f;
+    private static float maxCountBal = 2f;
 
     public static int PlayerCount { get; set; }
     public static int PlayerMax => playerMax;

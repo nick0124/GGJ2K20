@@ -1,34 +1,33 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PanelStatistic : MonoBehaviour
 {
     [SerializeField] private GameObject btnRestart;
-    [SerializeField] private GameObject btnBackToMenu;
+    [SerializeField] private GameObject btnNext;
     private void Start()
     {
-        // Подсчет очков
-        
-        
-        
-        // Если равное количество очков у игроков, то рестарт
-        
-        // Иначе выход в меню
-        
+        for (int i = 1; i < GameData.PlayerCount; i++)
+        {
+            if (PlayerPrefs.GetInt($"Player{i}") < GameData.MaxCountBal)
+            {
+                btnNext.SetActive(true);
+            }
+            else
+            {
+                btnRestart.SetActive(true);
+            }
+        }
     }
 
     public void ClickRestart()
     {
-        //SceneManager.LoadScene(Random.Range(1, 2)); // Случайный выбор
-        
-        SceneManager.LoadScene(1);
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Main");
     }
     
-    public void ClickBackToMenu()
+    public void ClickNext()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(1);
     }
 }
