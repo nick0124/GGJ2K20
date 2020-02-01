@@ -13,8 +13,8 @@ public class selectLevels : MonoBehaviour
         {
             levels[i].SetActive(false);
         }
-        int l = Random.Range(0, levels.Length - 1);
-        levels[l].SetActive(true);
+        int l = Random.Range(1, 2);
+        levels[l-1].SetActive(true);
     }
 
     // Update is called once per frame
