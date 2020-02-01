@@ -15,9 +15,9 @@ public class PlayerStatistic : MonoBehaviour
             gameObject.SetActive(false);
             return;
         }
-
-        Debug.LogError($"Key: {_name} val: {PlayerPrefs.GetInt(_name).ToString()}");
+        
         _score.text = PlayerPrefs.GetInt(_name).ToString();
-        _filled.fillAmount = PlayerPrefs.GetInt(_name) / 10f * GameData.MaxCountBal;
+        //_filled.fillAmount = PlayerPrefs.GetInt(_name) / (100f * GameData.MaxCountBal);
+        _filled.fillAmount = PlayerPrefs.GetInt(_name) / GameData.MaxCountBal;
     }
 }
