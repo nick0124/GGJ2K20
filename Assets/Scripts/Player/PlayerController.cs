@@ -42,13 +42,13 @@ public class PlayerController : MonoBehaviour
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-		if (collision.transform.name != gameObject.name) {
+		if (collision.transform.name != gameObject.name && collision.isTrigger == false) {
 			collide++;
 		}
 	}
 
 	private void OnTriggerExit2D(Collider2D collision) {
-		if (collision.transform.name != gameObject.name) {
+		if (collision.transform.name != gameObject.name && collision.isTrigger == false) {
 			collide--;
 		}
 	}
