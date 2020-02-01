@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
 		rb = gameObject.GetComponent<Rigidbody2D>();
-		PlayerPrefs.SetInt(name, 0);
     }
 
     // Update is called once per frame
