@@ -15,9 +15,12 @@ public class UI_Jenya : MonoBehaviour
     public static int lastFiksetWindow;
     bool stopGame = false;
     int a = -1;
+    
     void Start()
     {
-        points_1=points_2=points_3=points_4=0;
+        
+
+        points_1 =points_2=points_3=points_4=0;
         if (GameData.PlayerCount== 2) { textPoints_3.gameObject.SetActive(false); textPoints_4.gameObject.SetActive(false);
             player_3.SetActive(false); player_4.SetActive(false);
         }
