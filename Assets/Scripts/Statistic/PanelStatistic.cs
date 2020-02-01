@@ -22,6 +22,7 @@ public class PanelStatistic : MonoBehaviour
 
     public void ClickRestart()
     {
+        PlayerPrefs.DeleteAll();
         //SceneManager.LoadScene(Random.Range(1, 2)); // Случайный выбор
         
         SceneManager.LoadScene(1);

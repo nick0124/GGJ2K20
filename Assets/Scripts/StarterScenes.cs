@@ -20,14 +20,6 @@ public class StarterScenes : MonoBehaviour
         UpdateUI();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Delete))
-        {
-            PlayerPrefs.DeleteAll();
-        }
-    }
-
     public void ClickPlay()
     {
         //SceneManager.LoadScene(Random.Range(1, 2)); // Случайный выбор

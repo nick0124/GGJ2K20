@@ -105,64 +105,33 @@ public class UI_Jenya : MonoBehaviour
 
     void Calculation()
     {
-        if (player_1.activeSelf)
+        if((points_1 > points_2)&&(points_1 > points_3)&&(points_1 > points_4))
         {
-            if((points_1 > points_2)&&(points_1 > points_3)&&(points_1 > points_4))
-            {
-                int i = PlayerPrefs.GetInt("Player1");
-                i++;
-                PlayerPrefs.SetInt("Player1", i);
-            }
-            else
-            {
-                if (!PlayerPrefs.HasKey("Player1"))
-                    PlayerPrefs.SetInt("Player1", 0);
-            }
+            int i = PlayerPrefs.GetInt("Player1");
+            i++;
+            PlayerPrefs.SetInt("Player1", i);
+            Debug.Log("Player1");
         }
-
-        if (player_2.activeSelf)
+        if ((points_2 > points_1) && (points_2 > points_3) && (points_2 > points_4))
         {
-            if ((points_2 > points_1) && (points_2 > points_3) && (points_2 > points_4))
-            {
-                int i = PlayerPrefs.GetInt("Player2");
-                i++;
-                PlayerPrefs.SetInt("Player2", i);
-            }
-            else
-            {
-                if (!PlayerPrefs.HasKey("Player2"))
-                    PlayerPrefs.SetInt("Player2", 0);
-            }
+            int i = PlayerPrefs.GetInt("Player2");
+            i++;
+            PlayerPrefs.SetInt("Player2", i);
+            Debug.Log("Player2");
         }
-
-        if (player_3.activeSelf)
+        if ((points_3 > points_2) && (points_3 > points_1) && (points_3 > points_4))
         {
-            if ((points_3 > points_2) && (points_3 > points_1) && (points_3 > points_4))
-            {
-                int i = PlayerPrefs.GetInt("Player3");
-                i++;
-                PlayerPrefs.SetInt("Player3", i);
-            }
-            else
-            {
-                if (!PlayerPrefs.HasKey("Player3"))
-                    PlayerPrefs.SetInt("Player3", 0);
-            }
+            int i = PlayerPrefs.GetInt("Player3");
+            i++;
+            PlayerPrefs.SetInt("Player3", i);
+            Debug.Log("Player3");
         }
-
-        if (player_4.activeSelf)
+        if ((points_4 > points_2) && (points_4 > points_3) && (points_4 > points_1))
         {
-            if ((points_4 > points_2) && (points_4 > points_3) && (points_4 > points_1))
-            {
-                int i = PlayerPrefs.GetInt("Player4");
-                i++;
-                PlayerPrefs.SetInt("Player4", i);
-            }
-            else
-            {
-                if (!PlayerPrefs.HasKey("Player4"))
-                    PlayerPrefs.SetInt("Player4", 0);
-            }
+            int i = PlayerPrefs.GetInt("Player4");
+            i++;
+            PlayerPrefs.SetInt("Player4", i);
+            Debug.Log("Player4");
         }
     }
 }
