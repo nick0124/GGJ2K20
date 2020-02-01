@@ -17,10 +17,10 @@ public class UI_Jenya : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (z== 2) { textPoints_3.gameObject.SetActive(false); textPoints_4.gameObject.SetActive(false);
+        if (GameData.PlayerCount== 2) { textPoints_3.gameObject.SetActive(false); textPoints_4.gameObject.SetActive(false);
             player_3.SetActive(false); player_4.SetActive(false);
         }
-        if (z == 3)
+        if (GameData.PlayerCount == 3)
         {
             textPoints_4.gameObject.SetActive(false);player_4.SetActive(false);
         }
