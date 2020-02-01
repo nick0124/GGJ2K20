@@ -11,4 +11,6 @@ public class GameData : MonoBehaviour
     public static int PlayerMax => playerMax;
     public static int PlayerMin => playerMin;
     public static int MaxCountBal => maxCountBal;
+
+    public static int RoundCount { get; set; } = 1;
 }
