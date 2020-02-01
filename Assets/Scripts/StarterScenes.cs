@@ -16,6 +16,7 @@ public class StarterScenes : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPrefs.DeleteAll();
         GameData.PlayerCount = GameData.PlayerMin;
         UpdateUI();
     }
