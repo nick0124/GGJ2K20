@@ -7,6 +7,7 @@ public class window : MonoBehaviour
 {
     public bool repair = true;
     private int players;
+    public Sprite[] sprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,8 @@ public class window : MonoBehaviour
     public void breakWindow()
     {
         repair = false;
-        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        int r = Random.Range(1, 3);
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprite[r];
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,7 +35,7 @@ public class window : MonoBehaviour
         {
             if (!repair)
             {
-                gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprite[0];
                 UI_Jenya.points_1++;
                 repair = true;
             }
@@ -43,7 +45,7 @@ public class window : MonoBehaviour
         {
             if (!repair)
             {
-                gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprite[0];
                 UI_Jenya.points_2++;
                 repair = true;
             }
@@ -53,7 +55,7 @@ public class window : MonoBehaviour
         {
             if (!repair)
             {
-                gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprite[0];
                 UI_Jenya.points_3++;
                 repair = true;
             }
@@ -63,7 +65,7 @@ public class window : MonoBehaviour
         {
             if (!repair)
             {
-                gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                gameObject.GetComponent<SpriteRenderer>().sprite = sprite[0];
                 UI_Jenya.points_4++;
                 repair = true;
             }
