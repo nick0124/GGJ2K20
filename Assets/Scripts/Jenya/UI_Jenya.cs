@@ -17,6 +17,7 @@ public class UI_Jenya : MonoBehaviour
     int a = -1;
     void Start()
     {
+        points_1=points_2=points_3=points_4=0;
         if (GameData.PlayerCount== 2) { textPoints_3.gameObject.SetActive(false); textPoints_4.gameObject.SetActive(false);
             player_3.SetActive(false); player_4.SetActive(false);
         }
@@ -111,7 +112,7 @@ public class UI_Jenya : MonoBehaviour
             PlayerPrefs.SetInt("Player1", i);
             Debug.Log("Player1");
         }
-        if ((points_1 < points_2) && (points_2 > points_3) && (points_2 > points_4))
+        if ((points_2 > points_1) && (points_2 > points_3) && (points_2 > points_4))
         {
             int i = PlayerPrefs.GetInt("Player2");
             i++;
