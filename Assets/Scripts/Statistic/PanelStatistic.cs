@@ -30,7 +30,6 @@ public class PanelStatistic : MonoBehaviour
     
     public void ClickBackToMenu()
     {
-        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("Main");
     }
 }

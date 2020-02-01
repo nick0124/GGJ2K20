@@ -10,13 +10,14 @@ public class PlayerStatistic : MonoBehaviour
     private void Start()
     {
         // TODO: Если есть данные об игроке, то мы выводим его в статистику, иначе скрываем
-        if (!PlayerPrefs.HasKey(name))
+        if (!PlayerPrefs.HasKey(_name))
         {
             gameObject.SetActive(false);
             return;
         }
 
-        _score.text = PlayerPrefs.GetInt(name).ToString();
-        _filled.fillAmount = PlayerPrefs.GetInt(name) / 10f * 3.33f;
+        Debug.LogError($"Key: {_name} val: {PlayerPrefs.GetInt(_name).ToString()}");
+        _score.text = PlayerPrefs.GetInt(_name).ToString();
+        _filled.fillAmount = PlayerPrefs.GetInt(_name) / 10f * GameData.MaxCountBal;
     }
 }
