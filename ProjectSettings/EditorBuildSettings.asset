@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Sasha.unity
+    guid: df274ca23aa3ddf49b2c6998b587605f
+  - enabled: 1
+    path: Assets/Scenes/Jenya.unity
+    guid: 8bf67731aa9f8f34abbdffe33dd5bf21
+  - enabled: 1
+    path: Assets/Scenes/Nick.unity
+    guid: f4a983b1f12c2a7489a558064264b86e
   m_configObjects: {}
