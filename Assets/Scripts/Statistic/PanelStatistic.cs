@@ -7,15 +7,17 @@ public class PanelStatistic : MonoBehaviour
     [SerializeField] private GameObject btnNext;
     private void Start()
     {
-        for (int i = 1; i < GameData.PlayerCount; i++)
+        for (int i = 1; i <= GameData.PlayerCount; i++)
         {
             if (PlayerPrefs.GetInt($"Player{i}") < GameData.MaxCountBal)
             {
                 btnNext.SetActive(true);
+                btnRestart.SetActive(false);
             }
             else
             {
                 btnRestart.SetActive(true);
+                btnNext.SetActive(false);
             }
         }
     }

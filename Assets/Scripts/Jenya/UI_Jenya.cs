@@ -15,11 +15,10 @@ public class UI_Jenya : MonoBehaviour
     public static int lastFiksetWindow;
     bool stopGame = false;
     int a = -1;
-    
+    public int clock = 20;
+
     void Start()
     {
-        
-
         points_1 =points_2=points_3=points_4=0;
         if (GameData.PlayerCount== 2) { textPoints_3.gameObject.SetActive(false); textPoints_4.gameObject.SetActive(false);
             player_3.SetActive(false); player_4.SetActive(false);
@@ -34,7 +33,8 @@ public class UI_Jenya : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(stopGame == true)
+        scoreText.text = clock.ToString();
+        if (stopGame == true)
         {
             CancelInvoke("RunTimer");
             scoreText.text = "0";
@@ -99,8 +99,8 @@ public class UI_Jenya : MonoBehaviour
 
     void RunTimer()
     {
-        scoreText.text = (int.Parse(scoreText.text) - 1).ToString();
-        if(scoreText.text == "0") 
+        clock--;
+        if(clock <= 0) 
         {
             stopGame = true;            
         }
