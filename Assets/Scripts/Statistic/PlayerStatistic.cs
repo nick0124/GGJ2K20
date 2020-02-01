@@ -18,6 +18,6 @@ public class PlayerStatistic : MonoBehaviour
         
         _score.text = PlayerPrefs.GetInt(_name).ToString();
         //_filled.fillAmount = PlayerPrefs.GetInt(_name) / (100f * GameData.MaxCountBal);
-        _filled.fillAmount = PlayerPrefs.GetInt(_name) / GameData.MaxCountBal;
+        _filled.fillAmount = (float)PlayerPrefs.GetInt(_name) / GameData.MaxCountBal;
     }
 }

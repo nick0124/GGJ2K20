@@ -21,14 +21,6 @@ public class StarterScenes : MonoBehaviour
         UpdateUI();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Delete))
-        {
-            PlayerPrefs.DeleteAll();
-        }
-    }
-    
     public void ClickPlay()
     {
         //SceneManager.LoadScene(Random.Range(1, 2)); // Случайный выбор
@@ -49,6 +41,14 @@ public class StarterScenes : MonoBehaviour
         }
         
         UpdateUI();
+    }
+    
+    public void ClickExit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
     }
 
     private void SetLabel(string value)
