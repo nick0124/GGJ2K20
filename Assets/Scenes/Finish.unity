@@ -2019,4 +2019,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnRestart: {fileID: 941520052}
   btnNext: {fileID: 1559517334}
-  Label: {fileID: 1602726486}
+  btnNextText: {fileID: 774643227}
+  label: {fileID: 1602726486}
