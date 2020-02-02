@@ -10,6 +10,9 @@ public class StarterScenes : MonoBehaviour
 
     private Arrow _arrow = Arrow.LEFT;
 
+    public GameObject[] levels;
+
+
     [SerializeField] private Text count;
     [SerializeField] private Button left;
     [SerializeField] private Button right;
@@ -23,8 +26,20 @@ public class StarterScenes : MonoBehaviour
     public void ClickPlay()
     {
         //SceneManager.LoadScene(Random.Range(1, 2)); // Случайный выбор
+        for (int i = 0; i < levels.Length; i++)
+        {
+            levels[i].SetActive(false);
+        }
+        int l = Random.Range(0, 100);
+        if (l < 51)
+        {
+            SceneManager.LoadScene(1);
+        }
+        else
+        {
+            SceneManager.LoadScene(2);
+        }
         
-        SceneManager.LoadScene(1);
     }
 
     public void ClickArrow(int dir)
