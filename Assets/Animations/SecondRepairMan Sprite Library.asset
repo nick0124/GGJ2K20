@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
+  m_Name: SecondRepairMan Sprite Library
+  m_EditorClassIdentifier: 
+  m_Labels:
+  - m_Name: Eyes
+    m_Hash: 120101800
+    m_CategoryList:
+    - m_Name: Normal
+      m_Hash: 640249298
+      m_Sprite: {fileID: -1042504991846533657, guid: adbec134a9f03f349893a5baa379c7c1,
+        type: 3}
+    - m_Name: Damaged
+      m_Hash: 326473335
+      m_Sprite: {fileID: 425008378345429511, guid: 9791731811a7bda4fb12b01ff09f7a79,
+        type: 3}
+  - m_Name: Eyes 2
+    m_Hash: 495525080
+    m_CategoryList:
+    - m_Name: Normal
+      m_Hash: 640249298
+      m_Sprite: {fileID: 9160109257830213896, guid: adbec134a9f03f349893a5baa379c7c1,
+        type: 3}
+    - m_Name: Damaged
+      m_Hash: 326473335
+      m_Sprite: {fileID: 618392757175553098, guid: 9791731811a7bda4fb12b01ff09f7a79,
+        type: 3}
