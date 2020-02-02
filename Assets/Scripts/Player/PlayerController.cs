@@ -70,8 +70,8 @@ public class PlayerController : MonoBehaviour
 		} 
 
 		if (Input.GetKey(moveJump) && collide > 0) {
-            Jump = true;
-            animator.SetBool("Jumping", true);
+            //Jump = true;
+			//animator.Play("Jump");
 			rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
 		}
 	}
