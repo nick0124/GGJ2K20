@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
 	public float movementSpeed;
 
 	public float jumpForce;
-	public float HorizontalMovement;
+    public float HorizontalMovement;
+    bool Jump = false;
 
 	
    [Header("Controlls")]
@@ -68,10 +69,16 @@ public class PlayerController : MonoBehaviour
 			gameObject.transform.localScale = new Vector2(-0.32f, 0.32f);
 		} 
 
-		if (Input.GetKeyDown(moveJump) && collide > 0) {
+		if (Input.GetKey(moveJump) && collide > 0) {
+            Jump = true;
+            animator.SetBool("Jumping", true);
 			rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        }
+		}
 	}
+    //public void OnLanding ()
+    //{
+        //animator.SetBool("Jumping", false);
+    //}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.transform.name != gameObject.name && collision.isTrigger == false) {
