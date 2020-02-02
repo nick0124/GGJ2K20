@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 	[Header("Movement")]
 	public float movementSpeed;
 	public float jumpForce;
+	public float HorizontalMovement;
+	public Animator animator;
 
 	[Header("Controlls")]
 	public KeyCode moveLeft;
@@ -23,11 +25,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
 		rb = gameObject.GetComponent<Rigidbody2D>();
-    }
+		animator = gameObject.GetComponent<Animator>();
+	}
 
     // Update is called once per frame
     void Update()
     {
+		HorizontalMovement = Input.GetAxisRaw("Horizontal") * movementSpeed;
+		animator.SetFloat("Speed", Mathf.Abs(HorizontalMovement));
 		if (Input.GetKey(moveRight)) {
 			rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
 		}

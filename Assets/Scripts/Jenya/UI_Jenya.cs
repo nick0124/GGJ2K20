@@ -8,6 +8,7 @@ public class UI_Jenya : MonoBehaviour
 {
     public static int points_1, points_2, points_3, points_4;
     public Text textPoints_1, textPoints_2, textPoints_3, textPoints_4;
+    public GameObject imgPlayer3, imgPlayer4;
     public GameObject player_1, player_2, player_3, player_4;
     public Text scoreText;
     public GameObject[] windowsObj;
@@ -21,11 +22,11 @@ public class UI_Jenya : MonoBehaviour
     {
         points_1 =points_2=points_3=points_4=0;
         if (GameData.PlayerCount== 2) { textPoints_3.gameObject.SetActive(false); textPoints_4.gameObject.SetActive(false);
-            player_3.SetActive(false); player_4.SetActive(false);
+            player_3.SetActive(false); player_4.SetActive(false); imgPlayer3.SetActive(false); imgPlayer4.SetActive(false);
         }
         if (GameData.PlayerCount == 3)
         {
-            textPoints_4.gameObject.SetActive(false);player_4.SetActive(false);
+            textPoints_4.gameObject.SetActive(false);player_4.SetActive(false); imgPlayer4.SetActive(false);
         }
         InvokeRepeating("RunTimer", 1, 1);
     }
@@ -33,7 +34,7 @@ public class UI_Jenya : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = clock.ToString();
+        scoreText.text = "До конца раунда: "+clock.ToString();
         if (stopGame == true)
         {
             CancelInvoke("RunTimer");
