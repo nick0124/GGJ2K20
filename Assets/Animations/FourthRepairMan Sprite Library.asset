@@ -12,4 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
   m_Name: FourthRepairMan Sprite Library
   m_EditorClassIdentifier: 
-  m_Labels: []
+  m_Labels:
+  - m_Name: Eyes
+    m_Hash: 120101800
+    m_CategoryList:
+    - m_Name: Normal
+      m_Hash: 640249298
+      m_Sprite: {fileID: -8066237396863422884, guid: 739d5373c3da7fa4eb80f3c125b8a401,
+        type: 3}
+    - m_Name: Damaged
+      m_Hash: 326473335
+      m_Sprite: {fileID: -7369880750311333772, guid: 3dffd70bc8ff3ff4ea7d94afb9543459,
+        type: 3}
+  - m_Name: Eyes 2
+    m_Hash: 495525080
+    m_CategoryList:
+    - m_Name: Normal
+      m_Hash: 640249298
+      m_Sprite: {fileID: -8668519407385417324, guid: 739d5373c3da7fa4eb80f3c125b8a401,
+        type: 3}
+    - m_Name: Damaged
+      m_Hash: 326473335
+      m_Sprite: {fileID: 7088291088898256882, guid: 3dffd70bc8ff3ff4ea7d94afb9543459,
+        type: 3}

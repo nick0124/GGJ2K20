@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 	private Rigidbody2D rb;
+    public Animator animator;
 
 	[Header("Movement")]
 	public float movementSpeed;
 	public float jumpForce;
+    public float HorizontalMovement;
 
-	[Header("Controlls")]
+   [Header("Controlls")]
 	public KeyCode moveLeft;
 	public KeyCode moveRight;
 	public KeyCode moveJump;
@@ -23,21 +25,23 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
 		rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-		if (Input.GetKey(moveRight)) {
-			rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
-		}
+        HorizontalMovement = Input.GetAxisRaw("Horizontal") * movementSpeed;
+        animator.SetFloat("Speed", Mathf.Abs(HorizontalMovement));
+        if (Input.GetKey(moveRight)) {
+            rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
+        }
 		if (Input.GetKey(moveLeft)) {
-			rb.velocity = new Vector2(-movementSpeed, rb.velocity.y);
-		}
-
+            rb.velocity = new Vector2(-movementSpeed, rb.velocity.y);
+        }
 		if (Input.GetKeyDown(moveJump) && collide > 0) {
 			rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-		}
+        }
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
