@@ -2,7 +2,7 @@
 
 public class GameData : MonoBehaviour
 {
-    private static int playerMax = 4;
+    private static int playerMax = 3;
     private static int playerMin = 2;
 
     private static int maxCountBal = 2;

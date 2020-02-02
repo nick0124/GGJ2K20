@@ -930,6 +930,7 @@ MonoBehaviour:
   count: {fileID: 2031110820}
   left: {fileID: 1495158421}
   right: {fileID: 1889984835}
+  panelGame: {fileID: 0}
 --- !u!1 &1889984833
 GameObject:
   m_ObjectHideFlags: 0

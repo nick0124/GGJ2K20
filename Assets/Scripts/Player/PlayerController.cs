@@ -5,14 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 	private Rigidbody2D rb;
+    public Animator animator;
 
 	[Header("Movement")]
 	public float movementSpeed;
+
 	public float jumpForce;
 	public float HorizontalMovement;
-	public Animator animator;
 
-	[Header("Controlls")]
+	
+   [Header("Controlls")]
 	public KeyCode moveLeft;
 	public KeyCode moveRight;
 	public KeyCode moveJump;
@@ -25,24 +27,50 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
 		rb = gameObject.GetComponent<Rigidbody2D>();
+
 		animator = gameObject.GetComponent<Animator>();
 	}
 
     // Update is called once per frame
     void Update()
     {
-		HorizontalMovement = Input.GetAxisRaw("Horizontal") * movementSpeed;
-		animator.SetFloat("Speed", Mathf.Abs(HorizontalMovement));
 		if (Input.GetKey(moveRight)) {
-			rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
+			
+			if(gameObject.name== "Second_Player")
+			{
+				animator.Play("Run_SecondPlayer");
+			}
+			if (gameObject.name == "Third_Player")
+			{
+				animator.Play("Run_ThirdPlayer");
+			}
+			if (gameObject.name == "First_Player")
+			{
+				animator.Play("Run");
+			}
+			gameObject.transform.localScale = new Vector2(0.32f, 0.32f);
 		}
 		if (Input.GetKey(moveLeft)) {
-			rb.velocity = new Vector2(-movementSpeed, rb.velocity.y);
-		}
+            rb.velocity = new Vector2(-movementSpeed, rb.velocity.y);
+			if (gameObject.name == "Second_Player")
+			{
+				animator.Play("Run_SecondPlayer");
+			}
+			if (gameObject.name == "Third_Player")
+			{
+				animator.Play("Run_ThirdPlayer");
+			}
+			if (gameObject.name == "First_Player")
+			{
+				animator.Play("Run");
+			}
+			gameObject.transform.localScale = new Vector2(-0.32f, 0.32f);
+		} 
 
 		if (Input.GetKeyDown(moveJump) && collide > 0) {
 			rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-		}
+        }
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {

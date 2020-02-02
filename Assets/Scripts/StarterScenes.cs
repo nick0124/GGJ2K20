@@ -13,7 +13,6 @@ public class StarterScenes : MonoBehaviour
     [SerializeField] private Text count;
     [SerializeField] private Button left;
     [SerializeField] private Button right;
-
     private void Awake()
     {
         PlayerPrefs.DeleteAll();
@@ -42,7 +41,7 @@ public class StarterScenes : MonoBehaviour
         
         UpdateUI();
     }
-    
+
     public void ClickExit()
     {
 #if UNITY_EDITOR

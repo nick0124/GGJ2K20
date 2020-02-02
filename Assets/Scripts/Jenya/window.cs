@@ -31,7 +31,7 @@ public class window : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if(collision.name == "Player1")
+        if(collision.name == "First_Player")
         {
             if (!repair)
             {
@@ -41,7 +41,7 @@ public class window : MonoBehaviour
             }
             
         }
-        if (collision.name == "Player2")
+        if (collision.name == "Second_Player")
         {
             if (!repair)
             {
@@ -51,7 +51,7 @@ public class window : MonoBehaviour
             }
 
         }
-        if (collision.name == "Player3")
+        if (collision.name == "Third_Player")
         {
             if (!repair)
             {
